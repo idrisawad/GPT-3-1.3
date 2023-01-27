@@ -81,5 +81,12 @@ The `CodeSpider` class's parse method uses `response.css` but `response` is not 
 
 The `CodeSpider` class's parse method attempts to open a file with a name that is not defined.
 
+V05 TTS Answer:
 
+To implement TTS (text-to-speech) in the code, you can use a library such as gTTS (Google Text-to-Speech) or pyttsx3. For example, you can add the following code to the _get_response() method to convert the generated response to speech:
 
+You need to install gTTS package After this update.
+
+!pip install gTTS
+
+This code uses the gTTS library to convert the response text to speech and save the audio file as "response.mp3". You can play the audio file using any media player, or you can use python library such as pygame to play the audio file.
