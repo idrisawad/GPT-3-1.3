@@ -9,6 +9,7 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 import torch.nn as nn
 from torch.optim import Optimizer
 import scrapy
+from gtts import gTTS
 
 class DeepLearningChatbot:
 
@@ -41,6 +42,8 @@ class DeepLearningChatbot:
         response = self.model.generate(input_ids)[0]
         response_text = self.tokenizer.decode(response, skip_special_tokens=True)
 
+        tts = gTTS(response_text)
+        tts.save('response.mp3')
         return response_text
 
     def load_dataset(self, file_path):
