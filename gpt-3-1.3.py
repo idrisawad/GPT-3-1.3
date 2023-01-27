@@ -53,17 +53,11 @@ class DeepLearningChatbot:
                 labels.append(data[1])
         return texts, labels
 
-    def fine_tune_gpt3(self, model_name, dataset_path, batch_size
+    def fine_tune_gpt3(self, model_name, dataset_path, batch_size=4, device='cuda'):
+    self.batch_size = batch_size
+    self.device = device
 
 
-
-Idris Awad
- continue here
-=4, device='cuda'):
-self.batch_size = batch_size
-self.device = device
-
-Copy code
     # Instantiate the model and tokenizer
     self.model = AutoModelForCausalLM.from_pretrained(model_name).to(device)
     self.tokenizer = AutoTokenizer.from_pretrained(model_name)
