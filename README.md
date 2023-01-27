@@ -149,7 +149,6 @@ This command will install the required libraries, download the necessary NLTK da
 
 It's worth mentioning that this code is an example, and it might need further adjustments and fine-tuning to work correctly. Moreover, the fine-tuning process might take a while depending on the size of your dataset and the computational resources you have.
 
-
 ### 4.FAQ ### 
 
 #### 4.1 How to create training data texts? ####
@@ -225,7 +224,7 @@ When you fine-tune a model, you will generally want to use a batch size that is 
 
 It's also worth noting that in general a batch size of 4 is a good starting point for fine-tuning GPT-3 models, but you may need to increase or decrease it depending on the specific dataset and the GPU memory available.
 
-#### 5. Troubleshooting #### 
+### 5. Troubleshooting #### 
 
  - If the chatbot is not generating good responses, it might be because the fine-tuning process did not converge, or the dataset was not adequate.
  - If the chatbot is not learning from the internet, it might be because the text passed to the learn_from_internet method is not adequate.
@@ -234,11 +233,11 @@ It's also worth noting that in general a batch size of 4 is a good starting poin
 In this code, I have used the HuggingFace's transformers library to fine-tune a pre-trained GPT-3 model on the chatbot's learned data. I've added a new method fine_tune_gpt3 that takes the model name, train texts and train labels as input. This method instantiates the GPT-3 model and tokenizer, then it prepares the data for fine-tuning and fine-tune the model.
 
 
-#### 6. Conclusion #### 
+### 6. Conclusion #### 
 
 The Deep Learning Chatbot is an AI-powered chatbot that uses GPT-3 to generate responses to user inputs. The chatbot can be fine-tuned using a dataset of text inputs and corresponding outputs. The chatbot can also learn from the internet and remember every sentence ever talked. With the above-mentioned instructions, you should be able to use the chatbot effectively.
 
-### The potentials of this code are: ###
+#### 6.1 The potentials of this code are: ###
 
  - **Customization:** The chatbot can be fine-tuned using a dataset of text inputs and corresponding outputs, which allows for customization to the specific needs of the business.
 
@@ -263,16 +262,16 @@ The Deep Learning Chatbot is an AI-powered chatbot that uses GPT-3 to generate r
 However, it's important to note that this code is an example, and in order to turn it into a working product, there's more work to be done such as testing, fine-tuning, integration with other systems and scaling.
 
 
-#### 7. Legal Disclaimer: ####
+### 7. Legal Disclaimer: ###
 
 The information provided on this GitHub page (the "Page") is for general informational purposes only. The Page is not intended to provide legal advice or create an attorney-client relationship. You should not act or rely on any information on the Page without seeking the advice of a qualified attorney. The developer(s) of this Page do not warrant or guarantee the accuracy, completeness, or usefulness of any information contained on the Page and will not be liable for any errors or omissions in the information provided or for any actions taken in reliance on the information provided.
 
-### 7.1 Policy: ###
+#### 7.1 Policy: ####
 All code and other materials provided on this Page are the property of the developer(s) and are protected by copyright and other intellectual property laws. You may not use, reproduce, distribute, or create derivative works from the code or materials on the Page without the express written consent of the developer(s). If you would like to use any of the code or materials provided on this Page for any purpose, please contact the developer(s) for permission.
 
 The developer(s) reserve the right to make changes to the Page and to the code and materials provided on the Page at any time and without notice. The developer(s) also reserve the right to terminate access to the Page or to any code or materials provided on the Page at any time and without notice.
 
-### 7.2 Copyright Notice: ###
+#### 7.2 Copyright Notice: #### 
 Copyright (c) 2023 Idris Awad. All rights reserved. Any code or other materials provided on this Page are the property of the developer(s) and are protected by copyright and other intellectual property laws. Unauthorized use, reproduction, distribution, or creation of derivative works is prohibited.
 
 Please note that using, reproducing or distributing the code or materials provided on this Page without proper attribution and without obtaining express permission from the developer(s) may result in copyright infringement and legal action being taken against you.
