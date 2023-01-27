@@ -10,11 +10,14 @@ import torch.nn as nn
 from torch.optim import Optimizer
 import scrapy
 from gtts import gTTS
+import snowboydecoder
+import speech_recognition as sr
 
 class DeepLearningChatbot:
 
     def __init__(self):
         self.lemmatizer = nltk.stem.WordNetLemmatizer()
+        self.setup_snowboy()
         self.remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
         self.sentences = []
         self.model = None
@@ -34,6 +37,35 @@ class DeepLearningChatbot:
 
     def _lemmatize(self, word):
         return self.lemmatizer.lemmatize(word)
+
+    def setup_snowboy():
+        # Set up the snowboydecoder
+        detector = snowboydecoder.HotwordDetector("path/to/snowboy/model.pmdl", sensitivity=0.5)
+        detector.start(detected_callback=on_detected)
+
+    def on_detected():
+        # Function to call when the hotword is detected
+        print("Hotword detected!")
+        recognize_speech()
+
+    def recognize_speech():
+        # Initialize the speech recognizer
+        r = sr.Recognizer()
+
+        with sr.Microphone() as source:
+            print("Say something!")
+            audio = r.listen(source)
+
+        try:
+            user_input = r.recognize_google(audio)
+            print("You said: " + user_input)
+            # Call the _get_response function to generate a response
+            response = self._get_response(user_input)
+            print("Bot: " + response)
+        except sr.UnknownValueError:
+            print("Could not understand audio")
+        except sr.RequestError as e:
+            print("Error: Could not request results from Google Speech Recognition service; {0}".format(e))
 
     def _get_response(self, user_input):
         # Use the fine-tuned GPT-3 model to generate a response
