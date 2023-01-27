@@ -64,3 +64,22 @@ Optimization: The code doesn't use any optimization techniques like gradient acc
 Testing: The code should be thoroughly tested with a variety of inputs to ensure that it is working correctly and producing accurate responses.
 
 It's worth noting that these suggestions are meant to improve the code and enhance the performance of the model, but it's also important to keep in mind the trade-offs that come with each of the suggested improvements.
+
+V04 Issues:
+
+The class `DeepLearningChatbot` contains a method `fine_tune_gpt3` which has an indentation error. The method is missing an indentation before the line `self.batch_size = batch_size`.
+
+The class `DeepLearningChatbot`'s `fine_tune_gpt3` method calls a method `load_dataset` that expects a file path as an argument, but it is not being passed any argument.
+
+`DeepLearningChatbot`'s `fine_tune_gpt3` method uses `AdamW` optimizer and `ReduceLROnPlateau` scheduler but they are not imported.
+
+The class `CodeSpider` inherits from scrapy.Spider, but the import statement for scrapy is not included at the top of the file.
+
+The `CodeSpider` class starts with URLs that are not defined.
+
+The `CodeSpider` class's parse method uses `response.css` but `response` is not defined.
+
+The `CodeSpider` class's parse method attempts to open a file with a name that is not defined.
+
+
+
