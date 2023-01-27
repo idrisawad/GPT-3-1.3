@@ -1,0 +1,5 @@
+nltk
+scrapy
+torch
+transformers
+sklearn
