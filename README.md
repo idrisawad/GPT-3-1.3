@@ -9,7 +9,7 @@ It has been trained on a diverse range of internet text, and can generate human-
 
 ### 1. Overview ### 
 
-The Deep Learning Chatbot is an AI-powered chatbot that uses GPT-3 to generate responses to user inputs. The chatbot can be fine-tuned using a dataset of text inputs and corresponding outputs. The chatbot can also learn from the internet and remember every sentence ever talked. With the above-mentioned instructions, you should be able to use the chatbot effectively.
+The Deep Learning Chatbot is an AI-powered chatbot that uses GPT-3 to generate responses to user inputs. The chatbot can be fine-tuned using a dataset of text inputs and corresponding outputs. The chatbot can also learn from the internet and remember every sentence ever talked. 
 
 ### 2. Installation ### 
 
